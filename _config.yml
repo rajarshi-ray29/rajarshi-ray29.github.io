@@ -33,8 +33,8 @@ author:
 
   # Academic websites
   academia         : # URL
-  arxiv            : "https://arxiv.org/abs/2504.14582" # URL - Update with the correct link to your profile
   googlescholar    : "https://scholar.google.com/citations?hl=en&user=AAiQc5YAAAAJ&view_op=list_works&citft=1&citft=2&citft=3&email_for_op=rajarshi5675%40gmail.com&gmla=AH8HC4wAAaNIzfOUoqCQUjecWHZlqXS6KdMFn6kvKrya8Bb2X9G8Y1wie8MQzhNxeBT5M2EXAx5MKMncC_tdNwEeTCqPLrZqsFWprCXdPUvhdqrw10Qvnojs50qIDi0U9wAYjxtah7Apy4HOam3Mi27651ei0ulaOxyXQti_x-v0IYqXNe2wiaLzzOM41R-I7mDMN1dIg71ENxusqGivcpisv_2psDrPEAdvpIMYvBW_s-C191c"
+  arxiv            : "https://arxiv.org/abs/2504.14582" # URL - Update with the correct link to your profile
   inspire-hep      : # URL
   impactstory      : # URL
   orcid            : 
@@ -47,7 +47,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "https://github.com/rajarshi-ray29"
+  github           : "rajarshi-ray29"
   kaggle           : "rajarshiray29" # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
