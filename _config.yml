@@ -23,23 +23,23 @@ repository               : "rajarshi-ray29/rajarshi-ray.github.io"
 author:
   # Biographic information
   avatar           : "rajarshi-ray29.png" # filename of avatar image placed in /images/, e.g. "500x300.png"
-  name             : "Your Sidebar Name"
+  name             : "Rajarshi Ray"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  bio              : "AI Engineer in Hybrid Cloud Infrastructure @ IBM | Computer Vision & AI Researcher | CS Graduate Student @ Stony Brook University"
+  location         : "Stony Brook, NY"
+  employer         : "Stony Brook University"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "rajarshi5675@gmail.com" 
 
   # Academic websites
   academia         : # URL
-  arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  arxiv            : "https://arxiv.org/abs/2504.14582" # URL - Update with the correct link to your profile
+  googlescholar    : "https://scholar.google.com/citations?hl=en&user=AAiQc5YAAAAJ&view_op=list_works&citft=1&citft=2&citft=3&email_for_op=rajarshi5675%40gmail.com&gmla=AH8HC4wAAaNIzfOUoqCQUjecWHZlqXS6KdMFn6kvKrya8Bb2X9G8Y1wie8MQzhNxeBT5M2EXAx5MKMncC_tdNwEeTCqPLrZqsFWprCXdPUvhdqrw10Qvnojs50qIDi0U9wAYjxtah7Apy4HOam3Mi27651ei0ulaOxyXQti_x-v0IYqXNe2wiaLzzOM41R-I7mDMN1dIg71ENxusqGivcpisv_2psDrPEAdvpIMYvBW_s-C191c"
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : "http://orcid.org/yourorcidurl"
+  orcid            : 
   semantic         : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : 
   researchgate     : # URL
   scopus           : # URL
 
@@ -47,13 +47,13 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
-  kaggle           : # Username  
+  github           : "https://github.com/rajarshi-ray29"
+  kaggle           : "rajarshiray29" # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
   artstation       : # Username
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  bluesky          : # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
@@ -62,7 +62,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "rajarshi-ray-98477a204" # Username
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
@@ -75,7 +75,7 @@ author:
   weibo            : # Username
   wikipedia        : # Username
   xing             : # Username
-  youtube          : # Username
+  youtube          : "rajarshi7637" # Username
   zhihu            : # Username
 
 # Publication Category - The following the list of publication categories and their headings
