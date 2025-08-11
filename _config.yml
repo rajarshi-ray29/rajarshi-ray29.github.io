@@ -17,12 +17,12 @@ url                      : https://rajarshi-ray29.github.io/rajarshi-ray.github.
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "rajarshi-ray29/rajarshi-ray.github.io"
 
-# Site Author - The following control what appear as part of the author content on the side bar.
+# Site Author - The following control what appear a s part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "rajarshi-ray29.png" # filename of avatar image placed in /images/, e.g. "500x300.png"
+  avatar           : "rajarshi-ray.png" # filename of avatar image placed in /images/, e.g. "500x300.png"
   name             : "Rajarshi Ray"
   pronouns         : # example: "she/her"  
   bio              : "AI Engineer in Hybrid Cloud Infrastructure @ IBM | Computer Vision & AI Researcher | CS Graduate Student @ Stony Brook University"
