@@ -15,7 +15,7 @@ redirect_from:
 - 🎯 Long-term goal: pursue a **PhD** and contribute impactful AI research  
 - 🧪 Work spans **synthetic data generation**, **image restoration**, and **super-resolution**  
 - 🚀 Focused on **pushing the boundaries of AI innovation** in both **industry & academia**
-🎸 Outside of work, I love talking about **movies**, and enjoy playing the **guitar and singing**.   
+- 🎸 Outside of work, I love talking about **movies**, and enjoy playing the **guitar and singing**.   
 
 Background
 ======
