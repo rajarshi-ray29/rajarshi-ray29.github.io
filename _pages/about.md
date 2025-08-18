@@ -19,15 +19,15 @@ redirect_from:
 
 Background
 ======
-I was **born in Virginia, USA**, and moved to **India at the age of 2**, growing up in **Bangalore**, the country’s tech hub. I was fortunate to be raised by wonderful parents who taught me how to balance **professional ambitions with personal passions** — including an **early education in music**.  
+I was born in Virginia, USA, and moved to India at age 2, growing up in Bangalore, the country’s tech hub. Being surrounded by such a vibrant technology-driven environment sparked my early interest in **Computer Science** and inspired me to pursue a future in the field. My parents have been my greatest influences-my father, a PhD, instilled in me a **passion for research** and motivates me to follow a similar path, while my mother, a doctor, nurtured my curiosity in **healthcare technology** and taught me the importance of compassion in everything I do. Alongside these influences, an early education in music helped me develop balance, discipline, and creativity, which continue to shape the way I approach my work and aspirations.
 
 📸 *[Insert childhood photo here]*  
 
 For my undergraduate studies, I attended **BITS Pilani**, one of India’s most prestigious universities. There, I not only deepened my technical foundation but also explored leadership and creativity.  
 
-- 🎤 Led and organized multiple **Open Mic nights** through the Cultural Club  
-- 🎭 Directed and acted in a **musical play**, leading 50+ juniors to perform at our annual cultural fest  
-- 👨‍💻 Participated in numerous **hackathons**, and was active in the **Developers Club** and **Entrepreneurship Club**  
+- 🎤 Led and organized multiple **Open Mic nights** through the Cultural Club.
+- 🎭 Directed and acted in a **musical play**, leading 50+ juniors to perform at our annual cultural fest.
+- 👨‍💻 Participated in numerous **hackathons**, and was active in the **Developers Society** and **Entrepreneurship Club**.  
 
 📸 *[Insert cultural fest / open mic photo here]*  
 
