@@ -19,10 +19,7 @@ main:
     url: /publications/
 
   - title: "CV"
-    url: /cv/
-  
-  - title: "Education"
-    url: /education/
+    url: /files/resume.pdf
     
   - title: "Contact"
     url: /contact/
