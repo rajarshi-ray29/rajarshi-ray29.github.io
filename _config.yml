@@ -25,7 +25,7 @@ author:
   avatar           : "rajarshi-ray.png" # filename of avatar image placed in /images/, e.g. "500x300.png"
   name             : "Rajarshi Ray"
   pronouns         : # example: "she/her"  
-  bio              : "AI Engineer in Hybrid Cloud Infrastructure @ IBM | Computer Vision & AI Researcher | CS Graduate Student @ Stony Brook University"
+  bio              : "AI Engineer in Hybrid Cloud @ IBM | Computer Vision & AI Researcher | CS Graduate Student @ Stony Brook University"
   location         : "Stony Brook, NY"
   employer         : "Stony Brook University"
   uri              : # URL

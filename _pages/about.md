@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About Me"
+title: "👋 Hello there, I'm Rajarshi"
 author_profile: true
 redirect_from: 
   - /about/
@@ -9,9 +9,9 @@ redirect_from:
 
 - 🎓 Graduate student in **Computer Science** at **Stony Brook University**  
 - 🔬 Research experience in **Computer Vision, Deep Learning, and NLP**  
-- 💼 Industry experience at **IBM**, delivering **enterprise-scale AI & cloud solutions**  
+- 💼 Industry experience at **IBM**, delivering **enterprise-scale Agentic AI & cloud solutions**  
 - 💻 Skilled in **Python, TensorFlow, and Linux-based frameworks**  
-- ❤️ Passionate about advancing **AI in healthcare and education**  
+- ❤️ Passionate about advancing **AI in fields like healthcare and education**  
 - 🎯 Long-term goal: pursue a **PhD** and contribute impactful AI research  
 - 🧪 Work spans **synthetic data generation**, **image restoration**, and **super-resolution**  
 - 🚀 Focused on **pushing the boundaries of AI innovation** in both **industry & academia**
@@ -19,7 +19,7 @@ redirect_from:
 
 Background
 ======
-I was born in Virginia, USA, and moved to India at age 2, growing up in Bangalore, the country’s tech hub. Being surrounded by such a vibrant technology-driven environment sparked my early interest in **Computer Science** and inspired me to pursue a future in the field. My parents have been my greatest influences-my father, a PhD, instilled in me a **passion for research** and motivates me to follow a similar path, while my mother, a doctor, nurtured my curiosity in **healthcare technology** and taught me the importance of compassion in everything I do. Alongside these influences, an **early education in music** helped me develop **balance, discipline, and creativity**, which continue to shape the way I approach my work and aspirations.
+I was born in Virginia, USA, and moved to India at age 2, growing up in Bangalore, the country’s tech hub. Being surrounded by such a vibrant technology-driven environment sparked my early interest in **Computer Science** and inspired me to pursue a future in the field. My parents have been my greatest influences. My father, a PhD, instilled in me a **passion for research** and motivates me to follow a similar path, while my mother, a doctor, nurtured my curiosity in **healthcare technology** and taught me the importance of compassion in everything I do. Alongside these influences, an **early education in music** helped me develop **balance, discipline, and creativity**, which continue to shape the way I approach my work and aspirations.
 
 📸 *[Insert childhood photo here]*  
 

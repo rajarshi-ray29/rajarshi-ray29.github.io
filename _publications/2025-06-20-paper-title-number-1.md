@@ -8,11 +8,17 @@ date: 2025-06-20
 venue: 'CVPR 2025 Workshops (NTIRE)'
 paperurl: 'https://openaccess.thecvf.com/content/CVPR2025W/NTIRE/supplemental/Chen_NTIRE_2025_Challenge_CVPRW_2025_supplemental.pdf'
 citation: 'Chen, Z., Ray, R., Tomar, S.S., Mueller, K., et al. (2025). "NTIRE 2025 Image Super-Resolution (×4) Challenge Report." <i>Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)</i>, NTIRE Workshop, 2025.'
+image: /images/publications/ntire2025_mdrct.png
 ---
 
 ### About the Paper
 The NTIRE 2025 Image Super-Resolution (×4) Challenge was part of the NTIRE Workshop at CVPR 2025.  
 It benchmarked state-of-the-art methods for 4× single-image super-resolution, attracting teams worldwide to push the boundaries of image restoration.
+
+<p align="center">
+  <img src="/images/publications/ntire2025_mdrct.png" alt="MDRCT Architecture" style="max-width: 800px; width: 100%; height: auto;">
+</p>
+
 
 ---
 
