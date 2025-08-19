@@ -19,7 +19,7 @@ redirect_from:
 
 Background
 ======
-I was born in Virginia, USA, and moved to India at age 2, growing up in Bangalore, the country’s tech hub. Being surrounded by such a vibrant technology-driven environment sparked my early interest in **Computer Science** and inspired me to pursue a future in the field. My parents have been my greatest influences. My father, a PhD, instilled in me a **passion for research** and motivates me to follow a similar path, while my mother, a doctor, nurtured my curiosity in **healthcare technology** and taught me the importance of compassion in everything I do. Alongside these influences, an **early education in music** helped me develop **balance, discipline, and creativity**, which continue to shape the way I approach my work and aspirations.
+I was born in Virginia, USA, and moved to India at an early age. I had the privilege of growing up in the city of Bangalore, the country’s tech hub. Being surrounded by such a vibrant technology-driven environment sparked my early interest in **Computer Science** and inspired me to pursue a future in the field. My parents have been my greatest influences. My father, a PhD, instilled in me a **passion for research** and motivates me to follow a similar path, while my mother, a doctor, nurtured my curiosity in **healthcare technology** and taught me the importance of compassion in everything I do. Alongside these influences, an **early education in music** helped me develop **balance, discipline, and creativity**, which continue to shape the way I approach my work and aspirations.
 
 📸 *[Insert childhood photo here]*  
 
@@ -33,7 +33,7 @@ For my undergraduate studies, I attended **BITS Pilani**, one of India’s most 
 
 These experiences shaped my ability to **collaborate, lead, and innovate** — qualities I now bring into both research and professional settings.  
 
-During my undergrad, I had the opportunity to work in both **research** and **industry**:  
+During my journey, I had the opportunity to work in both **research** and **industry**:  
 - With **IUDX** (Indian Urban Data Exchange), gaining exposure to real-world data-driven solutions  
 - At **IBM**, where I most recently explored **Agentic AI frameworks** and their applications  
 
