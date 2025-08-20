@@ -1,11 +1,13 @@
 ---
 title: "IBM, AI Engineer in Hybrid Cloud"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+excerpt: |
+  - Published a paper documenting microservices deployment across x86 and s390x architectures using OpenShift Pipelines.  
+  - Engineered a JMeter-based pipeline for automated workload testing, achieving a 98% success rate in simulating real-world usage.  
+  - Contributed to the WatsonX Challenge by designing an AI Persona–driven synthetic transaction data generation framework.  
+  <br/><img src='/images/agentic_ai_framework2.png'>
 collection: experience
 ---
 
-IBM — AI Engineer, Hybrid Cloud (LinuxONE HCIT) · Poughkeepsie, NY
-======
 **Timeline:** Summer 2025 (Internship) · Co-op extension approved for Fall 2025  
 **Team:** LinuxONE Hybrid Cloud Integration & Test (HCIT)
 

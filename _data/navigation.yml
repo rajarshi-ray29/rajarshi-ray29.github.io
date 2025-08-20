@@ -11,11 +11,11 @@ main:
   - title: "Experience"
     url: /experience/
 
-  - title: "Portfolio"
-    url: /portfolio/
+  - title: "Research"
+    url: /research/
 
-  - title: "Publications"
-    url: /publications/
+  # - title: "Publications"
+  #   url: /publications/
 
   # - title: "Talks"
   #   url: /talks/    
