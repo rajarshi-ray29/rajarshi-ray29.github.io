@@ -12,6 +12,7 @@ image: /images/publications/ntire2025_mdrct.png
 ---
 
 ### About the Paper
+
 The NTIRE 2025 Image Super-Resolution (×4) Challenge was part of the NTIRE Workshop at CVPR 2025.  
 It benchmarked state-of-the-art methods for 4× single-image super-resolution, attracting teams worldwide to push the boundaries of image restoration.
 

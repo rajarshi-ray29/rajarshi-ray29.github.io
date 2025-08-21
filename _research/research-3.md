@@ -9,16 +9,17 @@ excerpt: |
   - Integrated hardware and software to enable actions like nodding and panning based on user feedback.  
 # date: 2025-02-28
 # venue: 'Independent Project'
-# image: /images/projects/raspberrypi-assistant.png
+image: /images/raspberry_pi.png
 ---
 
 ### About the Project
+
 This project combined **computer vision, speech recognition, and robotics** to create a functional **personal assistant robot** on a **Raspberry Pi** platform.  
 The system integrates language models and hardware control to provide an interactive and intelligent assistant experience.
 
-<!-- <p align="center">
-  <img src="/images/projects/raspberrypi-assistant.png" alt="Raspberry Pi Personal Assistant Robot" style="max-width: 800px; width: 100%; height: auto;">
-</p> -->
+<p align="center">
+  <img src="/images/raspberry_pi.png" alt="Raspberry Pi Personal Assistant Robot" style="max-width: 500px; width: 100%; height: auto;">
+</p>
 
 ---
 
