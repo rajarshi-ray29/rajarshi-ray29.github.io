@@ -33,10 +33,6 @@ For my undergraduate studies, I attended **BITS Pilani**, one of India’s most 
 
 These experiences shaped my ability to **collaborate, lead, and innovate** — qualities I now bring into both research and professional settings.  
 
-During my journey, I had the opportunity to work in both **research** and **industry**:  
-- With **IUDX** (Indian Urban Data Exchange), gaining exposure to real-world data-driven solutions  
-- At **IBM**, where I most recently explored **Agentic AI frameworks** and their applications  
-
 I’m also deeply passionate about building things outside the classroom. One of my personal projects was creating an **AI assistant robot** with a **Raspberry Pi**, capable of **face tracking, interaction, and Q&A** powered by LLMs.  
 
 <!-- 📸 *[Insert AI robot picture here]*   -->
