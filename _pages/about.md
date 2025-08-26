@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 - 🎓 Graduate student in **Computer Science** at **Stony Brook University**  
-- 🔬 Research experience in **Computer Vision, Deep Learning, and NLP**  
+- 🔬 Research experience in **Computer Vision, Deep Learning, and Confidential Computing**  
 - 💼 Industry experience at **IBM**, delivering **enterprise-scale Agentic AI & cloud solutions**  
 - 💻 Skilled in **Python, TensorFlow, and Linux-based frameworks**  
 - ❤️ Passionate about advancing **AI in fields like healthcare and education**  
