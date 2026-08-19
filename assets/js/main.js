@@ -465,7 +465,7 @@
       .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
       .then((data) => {
         videoGrid.replaceChildren();
-        data.videos.slice(0, 12).forEach((v, i) => {
+        data.videos.slice(0, 15).forEach((v, i) => {
           const title = cleanTitle(v.title);
 
           const card = document.createElement("article");
