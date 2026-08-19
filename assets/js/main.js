@@ -170,7 +170,9 @@
     const parent = canvas.parentElement;
     let W, H, particles;
     const mouse = { x: -9999, y: -9999 };
-    const COLORS = ["139,92,246", "34,211,238", "244,114,182"];
+    const COLORS = document.body.classList.contains("scene-page")
+      ? ["124,58,237", "139,92,246", "109,40,217"]
+      : ["139,92,246", "34,211,238", "244,114,182"];
 
     const resize = () => {
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -343,26 +345,35 @@
      ------------------------------------------------------------------ */
   const chat = document.querySelector("[data-chat-demo]");
   if (chat) {
+    const cite = (t) => `<span class="cite">${t}</span>`;
     const convos = [
       {
-        q: "Where do you explain how to price a cohort launch?",
-        a: "You cover launch pricing in <strong>Module 4 — Offer Design</strong>. The tier breakdown starts at the first timestamp, and the objection-handling part is in the Q&amp;A replay:",
-        chips: ["Session 6 · 47:12", "Q&A Replay 3 · 12:40"],
+        q: "Where does he explain backpropagation?",
+        a:
+          "Backpropagation is covered across two dedicated videos — an intuitive pass, then the math. " +
+          "<strong>“Backpropagation, intuitively | Deep Learning Chapter 3”</strong> is the conceptual walkthrough " +
+          cite("00:04") + " " + cite("02:35") + ", and <strong>“Backpropagation calculus | Chapter 4”</strong> " +
+          "formalizes it with the chain rule " + cite("00:00") + " " + cite("03:45") + ".",
+        conf: "High confidence · from 12 cited passages",
       },
       {
-        q: "What did you mean by \"anchor pricing\" in the pricing lecture?",
-        a: "Anchoring is introduced with the <strong>3-tier example</strong> — you show how the premium tier makes the middle tier feel obvious. Watch it here:",
-        chips: ["Module 4 · 18:05", "Live Call 2 · 31:22"],
+        q: "What topics do you know about?",
+        a:
+          "You have <strong>6 topics</strong> indexed and searchable — AgenticAI, Build &amp; sell AI Web Agents, " +
+          "Computer Vision 101, Neural Networks, Neural Networks Zero to Hero, and Startup. All 95 videos are ready " +
+          "to search. You can also chat with the three teaching agents — the Quiz Master, the Tutor, and the " +
+          "Navigator — from the Agents tab.",
       },
       {
-        q: "Which video shows the full setup, start to finish?",
-        a: "The complete walkthrough is in <strong>Module 1 — Setup</strong>. There's also a shorter recap from the last cohort:",
-        chips: ["Module 1 · 03:58", "Cohort 5 Recap · 08:15"],
+        q: "What is an AI Agent?",
+        a:
+          "All three videos in your <strong>AgenticAI</strong> topic converge on the same skeleton: a generative " +
+          "model becomes an agent when it can use tools and make decisions on its own toward a goal " +
+          cite("1") + " " + cite("02:04") + ". “Generative AI vs AI agents vs Agentic AI” adds the ladder — " +
+          "an agent handles one narrow task, agentic AI coordinates several " + cite("3") + " " + cite("05:47") + ".",
       },
     ];
     const body = chat.querySelector(".chat-body");
-    const clockIcon =
-      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
 
     const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -398,15 +409,11 @@
       ai.className = "msg msg-ai";
       ai.innerHTML =
         convo.a +
-        '<div class="ts-chips">' +
-        convo.chips
-          .map((c) => `<span class="ts-chip">${clockIcon}${c}</span>`)
-          .join("") +
-        "</div>";
+        (convo.conf ? `<div class="msg-conf">${convo.conf}</div>` : "");
       body.appendChild(ai);
       show(ai);
 
-      await wait(5200);
+      await wait(6800);
     };
 
     let started = false;
