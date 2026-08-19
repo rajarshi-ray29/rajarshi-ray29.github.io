@@ -659,6 +659,17 @@ button { font: inherit; cursor: pointer; }
   transition: opacity 0.3s;
 }
 .logo-tile:hover img { opacity: 1; }
+/* detailed crests keep their colors on a small circular coin */
+.logo-tile img.logo-coin {
+  width: 46px;
+  height: 46px;
+  padding: 4px;
+  border-radius: 50%;
+  background: #fbfbfd;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12), 0 4px 14px rgba(0, 0, 0, 0.4);
+  filter: none;
+  opacity: 1;
+}
 .logo-tile .logo-name {
   font-family: var(--font-mono);
   font-size: 11px;
