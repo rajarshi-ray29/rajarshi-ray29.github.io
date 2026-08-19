@@ -39,12 +39,13 @@ EXTRA_VIDEOS = [
         "title": "Satranga (Animal) - Acoustic Guitar & Vocal Cover by Rajarshi Ray",
         "published": "2024-05-26T22:22:48+00:00",
     },
-    {
-        "id": "epuYUO2HkLc",
-        "title": "Rabindrasangeet Reimagined: Guitar & Vocal Cover",
-        "published": "2024-05-07T08:27:23+00:00",
-    },
 ]
+
+# Uploads to keep off the page entirely.
+EXCLUDE_IDS = {
+    "YUUUropeJM4",  # Sajni
+    "epuYUO2HkLc",  # Rabindrasangeet Reimagined
+}
 
 
 class NoRedirect(urllib.request.HTTPRedirectHandler):
@@ -92,6 +93,7 @@ def main() -> None:
 
     feed_ids = {v["id"] for v in videos}
     videos += [v for v in EXTRA_VIDEOS if v["id"] not in feed_ids]
+    videos = [v for v in videos if v["id"] not in EXCLUDE_IDS]
 
     for v in videos:
         v["short"] = is_short(v["id"])
