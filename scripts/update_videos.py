@@ -2,7 +2,7 @@
 """Refresh data/videos.json from the channel's public RSS feed.
 
 Run by .github/workflows/update-videos.yml on a daily schedule so the
-music page always shows the latest uploads. Stdlib only — no API key.
+music page always shows the latest uploads. Stdlib only, no API key.
 
 Extras: the RSS feed only carries the ~15 newest uploads, so older
 covers worth keeping on the page are pinned in EXTRA_VIDEOS.
@@ -121,7 +121,7 @@ def main() -> None:
                 None,
             )
             if dupe_of:
-                print(f"dropping short {v['id']} ({v['title'][:40]}…) — dupe of {dupe_of['id']}")
+                print(f"dropping short {v['id']} ({v['title'][:40]}…), dupe of {dupe_of['id']}")
                 continue
         kept.append(v)
 

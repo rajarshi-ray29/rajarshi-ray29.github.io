@@ -1,4 +1,4 @@
-/* Rajarshi Ray — portfolio interactions */
+/* Rajarshi Ray · portfolio interactions */
 (() => {
   "use strict";
 
@@ -350,7 +350,7 @@
       {
         q: "Where does he explain backpropagation?",
         a:
-          "Backpropagation is covered across two dedicated videos — an intuitive pass, then the math. " +
+          "Backpropagation is covered across two dedicated videos: an intuitive pass, then the math. " +
           "<strong>“Backpropagation, intuitively | Deep Learning Chapter 3”</strong> is the conceptual walkthrough " +
           cite("00:04") + " " + cite("02:35") + ", and <strong>“Backpropagation calculus | Chapter 4”</strong> " +
           "formalizes it with the chain rule " + cite("00:00") + " " + cite("03:45") + ".",
@@ -359,17 +359,17 @@
       {
         q: "What topics do you know about?",
         a:
-          "You have <strong>6 topics</strong> indexed and searchable — AgenticAI, Build &amp; sell AI Web Agents, " +
+          "You have <strong>6 topics</strong> indexed and searchable: AgenticAI, Build &amp; sell AI Web Agents, " +
           "Computer Vision 101, Neural Networks, Neural Networks Zero to Hero, and Startup. All 95 videos are ready " +
-          "to search. You can also chat with the three teaching agents — the Quiz Master, the Tutor, and the " +
-          "Navigator — from the Agents tab.",
+          "to search. You can also chat with the three teaching agents (the Quiz Master, the Tutor, and the " +
+          "Navigator) from the Agents tab.",
       },
       {
         q: "What is an AI Agent?",
         a:
           "All three videos in your <strong>AgenticAI</strong> topic converge on the same skeleton: a generative " +
           "model becomes an agent when it can use tools and make decisions on its own toward a goal " +
-          cite("1") + " " + cite("02:04") + ". “Generative AI vs AI agents vs Agentic AI” adds the ladder — " +
+          cite("1") + " " + cite("02:04") + ". “Generative AI vs AI agents vs Agentic AI” adds the ladder: " +
           "an agent handles one narrow task, agentic AI coordinates several " + cite("3") + " " + cite("05:47") + ".",
       },
     ];
@@ -457,7 +457,7 @@
   document.querySelectorAll(".yt-facade[data-yt]").forEach(wireFacade);
 
   /* ------------------------------------------------------------------
-     Latest uploads grid (music page) — rendered from data/videos.json,
+     Latest uploads grid (music page), rendered from data/videos.json,
      which a scheduled GitHub Action refreshes from the channel feed
      ------------------------------------------------------------------ */
   const videoGrid = document.querySelector("[data-video-grid]");
@@ -506,7 +506,7 @@
       })
       .catch(() => {
         videoGrid.innerHTML =
-          '<p class="grid-fallback">Couldn\'t load the latest uploads — <a href="https://www.youtube.com/@rajarshi7637" target="_blank" rel="noopener">watch on YouTube instead</a>.</p>';
+          '<p class="grid-fallback">Couldn\'t load the latest uploads. <a href="https://www.youtube.com/@rajarshi7637" target="_blank" rel="noopener">Watch on YouTube instead</a>.</p>';
       });
   }
 
