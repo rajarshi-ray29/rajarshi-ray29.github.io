@@ -1808,28 +1808,38 @@ button { font: inherit; cursor: pointer; }
 }
 .radio-video .yt-facade { height: 100%; aspect-ratio: auto; min-height: 320px; }
 
-.video-info { padding: 18px 20px 20px; }
-.video-info h3 {
+/* slim title overlay — the video owns the card */
+.vc-title {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 42px 16px 13px;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.88));
   font-family: var(--font-display);
-  font-size: 16px;
-  line-height: 1.4;
-  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  text-align: left;
+  line-height: 1.35;
+  pointer-events: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.lang-tag {
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 10.5px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 4px 11px;
-  border-radius: 99px;
-  margin-right: 6px;
+
+.video-grid .grid-fallback {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--muted);
+  padding: 40px 0;
 }
-.lang-hindi { color: #ffd9a8; border: 1px solid rgba(251, 191, 36, 0.4); }
-.lang-bengali { color: #f9b8c8; border: 1px solid rgba(251, 113, 133, 0.45); }
-.lang-tamil { color: #b7f0d3; border: 1px solid rgba(52, 211, 153, 0.45); }
-.lang-english { color: #b6e7f5; border: 1px solid rgba(34, 211, 238, 0.45); }
-.lang-instrumental { color: #cabffa; border: 1px solid rgba(139, 92, 246, 0.5); }
+.video-grid .grid-fallback a { color: var(--amber); text-decoration: underline; }
+
+/* dynamic card entrance */
+.vc-in {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: intro-up 0.7s var(--ease-out) forwards;
+}
 
 .music-cta-note {
   max-width: 640px;

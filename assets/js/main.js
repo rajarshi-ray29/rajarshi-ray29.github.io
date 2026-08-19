@@ -434,7 +434,7 @@
   /* ------------------------------------------------------------------
      YouTube click-to-load facades
      ------------------------------------------------------------------ */
-  document.querySelectorAll(".yt-facade[data-yt]").forEach((el) => {
+  const wireFacade = (el) => {
     el.addEventListener("click", () => {
       const id = el.dataset.yt;
       const iframe = document.createElement("iframe");
@@ -446,7 +446,62 @@
       el.replaceChildren(iframe);
       el.style.cursor = "default";
     }, { once: true });
-  });
+  };
+  document.querySelectorAll(".yt-facade[data-yt]").forEach(wireFacade);
+
+  /* ------------------------------------------------------------------
+     Latest uploads grid (music page) — rendered from data/videos.json,
+     which a scheduled GitHub Action refreshes from the channel feed
+     ------------------------------------------------------------------ */
+  const videoGrid = document.querySelector("[data-video-grid]");
+  if (videoGrid) {
+    const cleanTitle = (t) =>
+      t.split("|")[0].replace(/#\S+/g, "").replace(/[-–—]\s*$/, "").trim() || t.trim();
+
+    const playIcon =
+      '<svg viewBox="0 0 24 24" fill="#331303"><path d="M8 5.5v13l11-6.5L8 5.5Z"/></svg>';
+
+    fetch("data/videos.json")
+      .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+      .then((data) => {
+        videoGrid.replaceChildren();
+        data.videos.slice(0, 12).forEach((v, i) => {
+          const title = cleanTitle(v.title);
+
+          const card = document.createElement("article");
+          card.className = "video-card vc-in";
+          card.style.animationDelay = `${(i % 3) * 0.07}s`;
+
+          const btn = document.createElement("button");
+          btn.className = "yt-facade";
+          btn.dataset.yt = v.id;
+          btn.dataset.title = title;
+          btn.setAttribute("aria-label", `Play ${title}`);
+
+          const img = document.createElement("img");
+          img.src = `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`;
+          img.alt = title;
+          img.loading = "lazy";
+
+          const play = document.createElement("span");
+          play.className = "play-btn";
+          play.innerHTML = playIcon;
+
+          const label = document.createElement("span");
+          label.className = "vc-title";
+          label.textContent = title;
+
+          btn.append(img, play, label);
+          card.appendChild(btn);
+          videoGrid.appendChild(card);
+          wireFacade(btn);
+        });
+      })
+      .catch(() => {
+        videoGrid.innerHTML =
+          '<p class="grid-fallback">Couldn\'t load the latest uploads — <a href="https://www.youtube.com/@rajarshi7637" target="_blank" rel="noopener">watch on YouTube instead</a>.</p>';
+      });
+  }
 
   /* ------------------------------------------------------------------
      Footer year
