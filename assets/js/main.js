@@ -432,6 +432,23 @@
   }
 
   /* ------------------------------------------------------------------
+     YouTube click-to-load facades
+     ------------------------------------------------------------------ */
+  document.querySelectorAll(".yt-facade[data-yt]").forEach((el) => {
+    el.addEventListener("click", () => {
+      const id = el.dataset.yt;
+      const iframe = document.createElement("iframe");
+      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+      iframe.title = el.dataset.title || "YouTube video";
+      iframe.allow =
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      iframe.allowFullscreen = true;
+      el.replaceChildren(iframe);
+      el.style.cursor = "default";
+    }, { once: true });
+  });
+
+  /* ------------------------------------------------------------------
      Footer year
      ------------------------------------------------------------------ */
   document.querySelectorAll("[data-year]").forEach((el) => {

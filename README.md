@@ -10,6 +10,7 @@ Hand-built static site (no frameworks, no build step) hosted on GitHub Pages.
 |---|---|
 | `index.html` | Portfolio — about, experience, research, publications, contact |
 | `scenesense.html` | SceneSenseAI product page for pilot customers and investors |
+| `music.html` | The YouTube journey — covers in four languages and the live radio session |
 | `cv.html` | Print-friendly CV (source of truth for `files/resume.pdf`) |
 
 ## Structure
