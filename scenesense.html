@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SceneSenseAI — AI teaching assistants for your video course library</title>
+  <meta name="description" content="SceneSenseAI turns lecture and course video libraries into interactive AI teaching assistants. Learners get answers cited with exact timestamps; instructors see exactly where students get confused.">
+  <meta property="og:title" content="SceneSenseAI — every answer in your videos, found in seconds">
+  <meta property="og:description" content="AI teaching assistants that answer from your course videos with exact timestamp citations, plus analytics that reveal where learners get stuck.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rajarshi-ray29.github.io/scenesense.html">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="scene-page">
+
+  <div class="atmosphere">
+    <div class="aurora aurora-1" style="background: radial-gradient(circle, rgba(34,211,238,0.3), transparent 65%)"></div>
+    <div class="aurora aurora-2" style="background: radial-gradient(circle, rgba(52,211,153,0.22), transparent 65%)"></div>
+    <div class="aurora aurora-3" style="background: radial-gradient(circle, rgba(139,92,246,0.15), transparent 65%)"></div>
+  </div>
+  <div class="grid-overlay"></div>
+  <div class="noise"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <header class="nav">
+    <div class="nav-progress"></div>
+    <div class="nav-inner">
+      <a class="nav-logo" href="scenesense.html" aria-label="SceneSenseAI home">
+        <span class="logo-mark" style="background:var(--grad-scene)">
+          <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M8 5.5v13l11-6.5L8 5.5Z" fill="#06231f"/></svg>
+        </span>
+        SceneSense<span style="background:var(--grad-scene);-webkit-background-clip:text;background-clip:text;color:transparent">AI</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="#problem">The Problem</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#audience">Who It's For</a></li>
+          <li><a href="index.html">← Founder's Site</a></li>
+        </ul>
+      </nav>
+      <a class="nav-cta" style="background:var(--grad-scene);color:#06231f" href="mailto:rajarshi5675@gmail.com?subject=SceneSenseAI%20—%20Founding%20Pilot">Get Early Access</a>
+      <button class="nav-burger" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-menu">
+    <a href="#problem">The Problem</a>
+    <a href="#how">How It Works</a>
+    <a href="#features">Features</a>
+    <a href="#audience">Who It's For</a>
+    <a href="index.html">← Founder's Site</a>
+    <a href="mailto:rajarshi5675@gmail.com?subject=SceneSenseAI%20—%20Founding%20Pilot">Get Early Access</a>
+  </div>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="scene-hero">
+      <canvas id="particles"></canvas>
+      <div class="scene-hero-inner">
+        <div class="hero-eyebrow intro-item" style="--intro-delay:.05s">
+          <span class="pulse-dot"></span> Early access · Founding pilots now open
+        </div>
+        <h1 class="intro-item" style="--intro-delay:.15s">
+          Every answer in your videos,<br><span>found in seconds.</span>
+        </h1>
+        <p class="hero-sub intro-item" style="--intro-delay:.3s">
+          SceneSenseAI gives every learner a personal AI teaching assistant trained on
+          <strong>your</strong> course video library. They ask in plain English — it answers with
+          <strong>exact timestamps</strong> back into your lectures. You see exactly where they get stuck.
+        </p>
+        <div class="hero-actions intro-item" style="--intro-delay:.45s; justify-content:center">
+          <a class="btn btn-scene" href="mailto:rajarshi5675@gmail.com?subject=SceneSenseAI%20—%20Founding%20Pilot" data-magnetic>
+            Become a founding pilot
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#how" data-magnetic>How it works</a>
+        </div>
+
+        <div class="intro-item" style="--intro-delay:.6s; width:100%; max-width:640px; margin-top:64px; text-align:left">
+          <div class="chat-mock" data-chat-demo>
+            <div class="chat-head">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="chat-title">scenesense — ai teaching assistant</span>
+            </div>
+            <div class="chat-body"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROBLEM ================= -->
+    <section class="section" id="problem">
+      <div class="section-inner">
+        <div class="section-eyebrow reveal">The Problem</div>
+        <h2 class="section-title reveal">Your best content is locked in videos <span style="background:linear-gradient(100deg,var(--magenta),var(--amber));-webkit-background-clip:text;background-clip:text;color:transparent">nobody can search.</span></h2>
+        <p class="section-lede reveal">
+          Course creators and instructors sit on hundreds of hours of recorded gold — cohort replays, lectures,
+          Q&amp;A sessions. But learners can't find anything in it, so the same questions arrive again and again.
+        </p>
+
+        <div class="pain-grid">
+          <div class="pain-card reveal" data-delay="0s">
+            <div class="p-icon">🔁</div>
+            <h3>The same 50 questions, every cohort</h3>
+            <p>Hours of founder and TA time every week go to answering questions whose answers already exist on video. FAQ docs and pinned posts don't get read — and support cost grows linearly with enrollment.</p>
+          </div>
+          <div class="pain-card reveal" data-delay="0.08s">
+            <div class="p-icon">🗄️</div>
+            <h3>A video library nobody opens</h3>
+            <p>Students won't scrub a 90-minute replay to find one answer. Past ~20 videos, chapter markers and search-by-title collapse — and your biggest asset quietly generates zero ongoing value.</p>
+          </div>
+          <div class="pain-card reveal" data-delay="0.16s">
+            <div class="p-icon">📉</div>
+            <h3>Stuck learners silently churn</h3>
+            <p>The student who can't find an answer at 11pm doesn't post in the community — they disengage. Confusion shows up as refunds, low completion, and bad exam distributions, long after it started.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="section" id="how" style="background:var(--bg-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line)">
+      <div class="section-inner">
+        <div class="section-eyebrow reveal">How It Works</div>
+        <h2 class="section-title reveal">Live in an afternoon. <span style="background:var(--grad-scene);-webkit-background-clip:text;background-clip:text;color:transparent">Not a semester.</span></h2>
+
+        <div class="step-grid">
+          <div class="step-card reveal" data-delay="0s">
+            <div class="step-num">01</div>
+            <h3>Connect your library</h3>
+            <p>Point SceneSenseAI at your recordings — course platform, Zoom cloud, or a folder of files. No tagging, no manual curation, no engineering team required.</p>
+          </div>
+          <div class="step-card reveal" data-delay="0.1s">
+            <div class="step-num">02</div>
+            <h3>Learners ask, videos answer</h3>
+            <p>Every question gets a grounded answer with clickable timestamp citations into the exact moment of the exact video — your frameworks, your words, verifiable in one click.</p>
+          </div>
+          <div class="step-card reveal" data-delay="0.2s">
+            <div class="step-num">03</div>
+            <h3>You see the confusion map</h3>
+            <p>An analytics dashboard shows what learners actually ask, per module — surfacing confusion points and content gaps before they show up in refunds or exam results.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+    <section class="section" id="features">
+      <div class="section-inner">
+        <div class="section-eyebrow reveal">Why It's Different</div>
+        <h2 class="section-title reveal">Built for trust, <span style="background:var(--grad-scene);-webkit-background-clip:text;background-clip:text;color:transparent">not just answers.</span></h2>
+        <p class="section-lede reveal">
+          Generic chatbots hallucinate in front of your paying students. SceneSenseAI is designed around one principle:
+          every answer must be traceable to your content.
+        </p>
+
+        <div class="feature-grid">
+          <div class="feature-card reveal" data-spotlight data-delay="0s">
+            <div class="f-icon">⏱️</div>
+            <h3>Timestamp-cited answers</h3>
+            <p>Every response links to minute-and-second moments in your own videos. Learners verify instantly, and a confident wrong answer never costs you your brand — because the source is one click away.</p>
+          </div>
+          <div class="feature-card reveal" data-spotlight data-delay="0.07s">
+            <div class="f-icon">📊</div>
+            <h3>Question analytics for instructors</h3>
+            <p>"Your students asked 214 questions about Lecture 9." See confusion clusters per module and fix the curriculum where it actually breaks — no more iterating on gut feel and 8%-response-rate surveys.</p>
+          </div>
+          <div class="feature-card reveal" data-spotlight data-delay="0.14s">
+            <div class="f-icon">🔒</div>
+            <h3>Your content stays yours</h3>
+            <p>Your curriculum is your moat. Your videos are used only to answer your learners' questions — never to train shared models. Plain-English data policy, not a security whitepaper.</p>
+          </div>
+          <div class="feature-card reveal" data-spotlight data-delay="0.21s">
+            <div class="f-icon">🧑‍🏫</div>
+            <h3>Scale the experience, not the headcount</h3>
+            <p>Give 1,000 students the support experience of 30 — the AI handles lookups so human attention goes to coaching. Growth stops being throttled by "but who answers the questions?"</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= AUDIENCE ================= -->
+    <section class="section" id="audience" style="background:var(--bg-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line)">
+      <div class="section-inner">
+        <div class="section-eyebrow reveal">Who It's For</div>
+        <h2 class="section-title reveal">Wherever knowledge lives on video.</h2>
+
+        <div class="audience-grid">
+          <div class="aud-card reveal" data-delay="0s">
+            <div class="a-icon">🎬</div>
+            <h3>Online course creators &amp; bootcamps</h3>
+            <p>Cohort-based courses, bootcamps, and creators on Kajabi, Teachable, Circle, or Skool with deep video libraries and communities full of repeat questions.</p>
+            <span class="a-status now">Onboarding now</span>
+          </div>
+          <div class="aud-card reveal" data-delay="0.08s">
+            <div class="a-icon">🏛️</div>
+            <h3>University instructors</h3>
+            <p>Large-enrollment courses with recorded lectures (Panopto, Echo360, Zoom), overloaded TAs, and midnight discussion-board queues before every exam.</p>
+            <span class="a-status pilot">Pilot programs open</span>
+          </div>
+          <div class="aud-card reveal" data-delay="0.16s">
+            <div class="a-icon">🏢</div>
+            <h3>Corporate L&amp;D teams</h3>
+            <p>Onboarding sessions, enablement calls, and training libraries that new hires can't search — so they ping your subject-matter experts instead.</p>
+            <span class="a-status later">On the roadmap</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOUNDER ================= -->
+    <section class="section">
+      <div class="section-inner">
+        <div class="founder-note reveal">
+          <img src="images/rajarshi-ray.jpeg" alt="Rajarshi Ray, founder of SceneSenseAI">
+          <div>
+            <blockquote>
+              "I've watched brilliant teachers answer the same question for the fortieth time while three hundred hours
+              of their best explanations sat unwatched. The answers exist — finding them is the product."
+            </blockquote>
+            <cite>Rajarshi Ray <span>— Founder, SceneSenseAI · AI Engineer at IBM · CVPR-published vision researcher</span></cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="section contact" id="contact">
+      <div class="section-inner">
+        <div class="section-eyebrow reveal">Get In Early</div>
+        <h2 class="section-title reveal">Stop answering question #41. <span style="background:var(--grad-scene);-webkit-background-clip:text;background-clip:text;color:transparent">Let your videos do it.</span></h2>
+        <p class="section-lede reveal">
+          Founding pilots get white-glove onboarding, direct access to the founder, and pricing that rewards being early.
+          Investors: the deck is one email away.
+        </p>
+        <div class="contact-actions reveal">
+          <a class="btn btn-scene" href="mailto:rajarshi5675@gmail.com?subject=SceneSenseAI%20—%20Founding%20Pilot" data-magnetic>
+            Request early access
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="mailto:rajarshi5675@gmail.com?subject=SceneSenseAI%20—%20Investor%20Deck" data-magnetic>Investor inquiries</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© <span data-year>2026</span> SceneSenseAI · Founded by <a href="index.html" style="color:var(--muted);text-decoration:underline">Rajarshi Ray</a></span>
+      <div class="footer-links">
+        <a href="index.html">Founder's Site</a>
+        <a href="cv.html">CV</a>
+        <a href="mailto:rajarshi5675@gmail.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

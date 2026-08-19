@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV — Rajarshi Ray</title>
+  <meta name="description" content="Curriculum vitae of Rajarshi Ray — Founder of SceneSenseAI and AI Engineer at IBM.">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #ffffff;
+      --ink: #14161f;
+      --ink-soft: #454a5c;
+      --ink-faint: #7a7f93;
+      --accent: #6d3ee8;
+      --accent-2: #0891b2;
+      --rule: #e4e6ee;
+      --font-display: "Space Grotesk", system-ui, sans-serif;
+      --font-body: "Inter", system-ui, sans-serif;
+      --font-mono: "JetBrains Mono", ui-monospace, monospace;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #060610;
+      background-image:
+        radial-gradient(ellipse 70% 40% at 50% -5%, rgba(109, 62, 232, 0.18), transparent 70%);
+      font-family: var(--font-body);
+      color: var(--ink);
+      padding: 110px 20px 80px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* toolbar */
+    .cv-toolbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 28px;
+      background: rgba(6, 6, 16, 0.8);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .cv-toolbar a.back {
+      color: #a3a8c3;
+      text-decoration: none;
+      font-size: 14.5px;
+      font-weight: 500;
+    }
+    .cv-toolbar a.back:hover { color: #fff; }
+    .cv-toolbar .actions { display: flex; gap: 12px; }
+    .cv-btn {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 9px 20px;
+      border-radius: 99px;
+      cursor: pointer;
+      text-decoration: none;
+      border: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .cv-btn:hover { transform: translateY(-1px); }
+    .cv-btn.primary {
+      color: #0b0b14;
+      background: linear-gradient(100deg, #8b5cf6, #22d3ee);
+      box-shadow: 0 4px 18px rgba(139, 92, 246, 0.4);
+    }
+    .cv-btn.ghost {
+      color: #eef0fa;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    /* sheet */
+    .sheet {
+      max-width: 850px;
+      margin: 0 auto;
+      background: var(--paper);
+      border-radius: 14px;
+      padding: 58px 62px;
+      box-shadow: 0 40px 120px rgba(0, 0, 0, 0.6);
+    }
+
+    .cv-head { border-bottom: 3px solid var(--ink); padding-bottom: 20px; margin-bottom: 26px; }
+    .cv-name {
+      font-family: var(--font-display);
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+    }
+    .cv-headline {
+      margin-top: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      background: linear-gradient(100deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .cv-contact {
+      margin-top: 12px;
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--ink-soft);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+    }
+    .cv-contact a { color: var(--ink-soft); text-decoration: none; }
+    .cv-contact a:hover { color: var(--accent); }
+
+    .cv-section { margin-bottom: 26px; }
+    .cv-section h2 {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .cv-section h2::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+
+    .cv-entry { margin-bottom: 16px; break-inside: avoid; }
+    .cv-entry:last-child { margin-bottom: 0; }
+    .entry-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .entry-title { font-size: 15.5px; font-weight: 700; }
+    .entry-title .org { font-weight: 600; color: var(--ink-soft); }
+    .entry-when {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink-faint);
+      white-space: nowrap;
+    }
+    .entry-sub { font-size: 13px; color: var(--ink-faint); margin-top: 1px; font-style: italic; }
+    .cv-entry ul { margin: 7px 0 0 18px; }
+    .cv-entry li { font-size: 13.5px; color: var(--ink-soft); line-height: 1.55; margin-bottom: 4px; }
+    .cv-entry li strong { color: var(--ink); font-weight: 600; }
+
+    .skill-rows { display: grid; gap: 7px; }
+    .skill-row { font-size: 13.5px; color: var(--ink-soft); line-height: 1.6; }
+    .skill-row strong { color: var(--ink); font-weight: 700; }
+
+    .pub-entry { font-size: 13.5px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 8px; }
+    .pub-entry strong { color: var(--ink); }
+    .pub-entry a { color: var(--accent-2); text-decoration: none; }
+    .pub-entry a:hover { text-decoration: underline; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 34px; }
+
+    @media (max-width: 720px) {
+      body { padding: 96px 12px 48px; }
+      .sheet { padding: 36px 26px; }
+      .cv-name { font-size: 31px; }
+      .two-col { grid-template-columns: 1fr; }
+      .cv-toolbar { padding: 12px 16px; }
+    }
+
+    @media print {
+      body { background: #fff; padding: 0; }
+      .cv-toolbar { display: none; }
+      .sheet {
+        max-width: none;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 14px 26px;
+      }
+      .cv-headline { -webkit-print-color-adjust: exact; print-color-adjust: exact; font-size: 14.5px; }
+      .cv-name { font-size: 33px; }
+      .cv-head { padding-bottom: 14px; margin-bottom: 16px; }
+      .cv-contact { font-size: 10.5px; margin-top: 8px; }
+      .cv-section { margin-bottom: 13px; }
+      .cv-section h2 { font-size: 12px; margin-bottom: 8px; }
+      .cv-entry { margin-bottom: 9px; }
+      .cv-entry ul { margin-top: 4px; }
+      .cv-entry li { font-size: 12px; line-height: 1.45; margin-bottom: 2px; }
+      .entry-title { font-size: 13.5px; }
+      .entry-sub { font-size: 11.5px; }
+      .entry-when { font-size: 10px; }
+      .skill-row, .pub-entry { font-size: 12px; line-height: 1.45; }
+      .pub-entry { margin-bottom: 5px; }
+      .skill-rows { gap: 5px; }
+      .two-col { break-inside: avoid; }
+      a { color: inherit; }
+      @page { margin: 9mm 7mm; size: letter; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cv-toolbar">
+    <a class="back" href="index.html">← rajarshi-ray29.github.io</a>
+    <div class="actions">
+      <button class="cv-btn ghost" onclick="window.print()">Print</button>
+      <a class="cv-btn primary" href="files/resume.pdf" download>Download PDF</a>
+    </div>
+  </div>
+
+  <div class="sheet">
+    <header class="cv-head">
+      <div class="cv-name">Rajarshi Ray</div>
+      <div class="cv-headline">Founder, SceneSenseAI · AI Engineer, IBM</div>
+      <div class="cv-contact">
+        <span>New York, USA</span>
+        <a href="mailto:rajarshi5675@gmail.com">rajarshi5675@gmail.com</a>
+        <span>+1 (631) 949-3136</span>
+        <a href="https://rajarshi-ray29.github.io">rajarshi-ray29.github.io</a>
+        <a href="https://github.com/rajarshi-ray29">github.com/rajarshi-ray29</a>
+        <a href="https://www.linkedin.com/in/rajarshi-ray-98477a204">linkedin/rajarshi-ray</a>
+      </div>
+    </header>
+
+    <section class="cv-section">
+      <h2>Education</h2>
+      <div class="cv-entry">
+        <div class="entry-head">
+          <div class="entry-title">M.S., Computer Science <span class="org">— Stony Brook University (SUNY), NY</span></div>
+          <div class="entry-when">Aug 2024 — Dec 2025</div>
+        </div>
+        <div class="entry-sub">GPA 3.9/4.0 · Coursework: Computer Vision, Natural Language Processing, AI, Data Science</div>
+      </div>
+      <div class="cv-entry">
+        <div class="entry-head">
+          <div class="entry-title">B.E., Computer Science <span class="org">— Birla Institute of Technology and Science (BITS), Pilani</span></div>
+          <div class="entry-when">2020 — Jul 2024</div>
+        </div>
+        <div class="entry-sub">GPA 8/10 · Coursework: AI, Data Science, Data Visualization · Teaching Assistant, Object-Oriented Programming</div>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>Industry Experience</h2>
+      <div class="cv-entry">
+        <div class="entry-head">
+          <div class="entry-title">Staff Engineer, Artificial Intelligence <span class="org">— IBM, Poughkeepsie, NY</span></div>
+          <div class="entry-when">Feb 2026 — Present</div>
+        </div>
+        <ul>
+          <li>Architecting a <strong>patent-pending agentic AI system</strong> generating <strong>100K+ synthetic financial transactions per run</strong> for large-scale workload testing on IBM z17 LinuxONE — fully on-prem to meet enterprise security requirements.</li>
+          <li>Collaborating with <strong>IBM Research</strong> to benchmark agentic AI workflows for industrial robotics, evaluating <strong>4 agent architectures across 4,000+ real-world asset-inspection scenarios</strong>; targeting a submission to ICLR 2027.</li>
+          <li>Running a locally deployed <strong>AI playground on IBM GPU infrastructure</strong>: 10 self-hosted LLMs serving 20–25 engineers for day-to-day experimentation and prototyping.</li>
+        </ul>
+      </div>
+      <div class="cv-entry">
+        <div class="entry-head">
+          <div class="entry-title">Software Engineer Intern <span class="org">— IBM, New York</span></div>
+          <div class="entry-when">May 2025 — Feb 2026</div>
+        </div>
+        <ul>
+          <li>Deployed and ported <strong>6 microservices</strong> across x86 and s390x architectures using Podman and OpenShift Pipelines.</li>
+          <li>Engineered a <strong>JMeter-based pipeline</strong> for automated workload testing, achieving a <strong>98% success rate</strong> in simulating real-world usage.</li>
+          <li>Contributed to the <strong>WatsonX Challenge</strong> by designing an agentic AI framework for persona-driven synthetic transaction data generation.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>Entrepreneurship</h2>
+      <div class="cv-entry">
+        <div class="entry-head">
+          <div class="entry-title">Founder <span class="org">— SceneSenseAI</span></div>
+          <div class="entry-when">2026 — Present</div>
+        </div>
+        <ul>
+          <li>Building <strong>personalized AI teaching assistants</strong> that connect to lecture/course video libraries: learners ask questions in natural language and receive answers <strong>cited with exact timestamps</strong> into the source videos.</li>
+          <li>Designed an <strong>instructor-facing analytics engine</strong> that surfaces learner confusion points and content gaps per module — before they appear in exam results or refund requests.</li>
+          <li>Validating with online course creators and university instructors; founding pilot program in progress across the US.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>Research Experience</h2>
+      <div class="cv-entry">
+        <div class="entry-head">
+          <div class="entry-title">Benchmarking Agentic AI for Industrial Robotics <span class="org">— IBM × IBM Research</span></div>
+          <div class="entry-when">2026 — Present</div>
+        </div>
+        <ul>
+          <li>Evaluating 4 agent architectures across <strong>4,000+ real-world asset-inspection scenarios</strong>; manuscript in preparation targeting <strong>ICLR 2027</strong>.</li>
+        </ul>
+      </div>
+      <div class="cv-entry">
+        <div class="entry-head">
+          <div class="entry-title">NTIRE 2025 Image Super-Resolution ×4 Challenge <span class="org">— VAI-GM Lab, Stony Brook University</span></div>
+          <div class="entry-when">Jan 2025 — May 2025</div>
+        </div>
+        <ul>
+          <li>Led Team VAI-GM; designed the <strong>Multi-step Dense Residual Connected Transformer (MDRCT)</strong>, improving on the DRCT baseline with multi-step residual connections for better gradient flow and feature preservation.</li>
+          <li>Achieved <strong>30.86 dB PSNR / 0.8942 SSIM</strong>, ranking <strong>18th globally</strong>; published in the CVPR 2025 NTIRE Workshop challenge report.</li>
+        </ul>
+      </div>
+      <div class="cv-entry">
+        <div class="entry-head">
+          <div class="entry-title">Grid-Based All-in-One Image Degradation &amp; Restoration <span class="org">— VAI-GM Lab, Stony Brook University</span></div>
+          <div class="entry-when">May 2025 — Feb 2026</div>
+        </div>
+        <ul>
+          <li>Curated a dataset of <strong>80,000+ grid images</strong> by synthesizing rain, haze, noise, and snow degradations; designed a transformer-based model performing multi-degradation restoration with a single network.</li>
+        </ul>
+      </div>
+      <div class="cv-entry">
+        <div class="entry-head">
+          <div class="entry-title">3D Lung CT Synthesis with Guided Diffusion <span class="org">— VAI-GM Lab, advised by Prof. Klaus Mueller</span></div>
+          <div class="entry-when">Aug 2024 — May 2025</div>
+        </div>
+        <ul>
+          <li>Generated high-fidelity synthetic 3D lung CT images by encoding medical images into latent space with <strong>VQ-VAE</strong> and sampling with guided <strong>diffusion models</strong>.</li>
+          <li>Built and maintained an <strong>Orthanc-based DICOM server</strong> (Docker) for scalable, secure medical-image storage, retrieval, and analysis.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>Publications</h2>
+      <div class="pub-entry">
+        Chen Z., <strong>Ray R.</strong>, Tomar S.S., Mueller K., et al. (2025). "NTIRE 2025 Image Super-Resolution (×4) Challenge Report."
+        <em>Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW), NTIRE Workshop.</em>
+        <a href="https://arxiv.org/abs/2504.14582">arXiv:2504.14582</a>
+      </div>
+      <div class="pub-entry">
+        <strong>In preparation:</strong> Benchmarking agentic AI workflows for industrial robotics (with IBM Research) — targeting ICLR 2027.
+      </div>
+    </section>
+
+    <div class="two-col">
+      <section class="cv-section">
+        <h2>Skills</h2>
+        <div class="skill-rows">
+          <div class="skill-row"><strong>AI / ML:</strong> PyTorch, TensorFlow/Keras, Diffusion Models, VAEs, GANs, Transformers, LLMs, Agentic AI, RAG, Model Quantization, Hugging Face, OpenCV, YOLO</div>
+          <div class="skill-row"><strong>Systems &amp; Cloud:</strong> Docker, Podman, OpenShift/Tekton, Kubernetes, Linux (x86/s390x), JMeter, GitOps, DICOM/Orthanc</div>
+          <div class="skill-row"><strong>Languages:</strong> Python, C/C++, Java, Kotlin, SQL, Bash</div>
+        </div>
+      </section>
+
+      <section class="cv-section">
+        <h2>Highlights</h2>
+        <div class="skill-rows">
+          <div class="skill-row"><strong>Patent-pending</strong> agentic AI system for synthetic financial data (IBM)</div>
+          <div class="skill-row"><strong>Ranked 18th globally</strong> — NTIRE 2025 Super-Resolution Challenge, CVPR 2025</div>
+          <div class="skill-row"><strong>IBM WatsonX Challenge</strong> — agentic synthetic-data framework</div>
+          <div class="skill-row"><strong>Founder</strong> — SceneSenseAI, AI teaching assistants for video course libraries</div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
