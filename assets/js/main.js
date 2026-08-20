@@ -341,102 +341,17 @@
   });
 
   /* ------------------------------------------------------------------
-     SceneSense chat demo loop
+     SceneSense demo video: play while on screen, pause when scrolled away
      ------------------------------------------------------------------ */
-  const chat = document.querySelector("[data-chat-demo]");
-  if (chat) {
-    const cite = (t) => `<span class="cite">${t}</span>`;
-    const convos = [
-      {
-        q: "Where does he explain backpropagation?",
-        a:
-          "Backpropagation is covered across two dedicated videos: an intuitive pass, then the math. " +
-          "<strong>“Backpropagation, intuitively | Deep Learning Chapter 3”</strong> is the conceptual walkthrough " +
-          cite("00:04") + " " + cite("02:35") + ", and <strong>“Backpropagation calculus | Chapter 4”</strong> " +
-          "formalizes it with the chain rule " + cite("00:00") + " " + cite("03:45") + ".",
-        conf: "High confidence · from 12 cited passages",
-      },
-      {
-        q: "What topics do you know about?",
-        a:
-          "You have <strong>6 topics</strong> indexed and searchable: AgenticAI, Build &amp; sell AI Web Agents, " +
-          "Computer Vision 101, Neural Networks, Neural Networks Zero to Hero, and Startup. All 95 videos are ready " +
-          "to search. You can also chat with the three teaching agents (the Quiz Master, the Tutor, and the " +
-          "Navigator) from the Agents tab.",
-      },
-      {
-        q: "What is an AI Agent?",
-        a:
-          "All three videos in your <strong>AgenticAI</strong> topic converge on the same skeleton: a generative " +
-          "model becomes an agent when it can use tools and make decisions on its own toward a goal " +
-          cite("1") + " " + cite("02:04") + ". “Generative AI vs AI agents vs Agentic AI” adds the ladder: " +
-          "an agent handles one narrow task, agentic AI coordinates several " + cite("3") + " " + cite("05:47") + ".",
-      },
-    ];
-    const body = chat.querySelector(".chat-body");
-
-    const wait = (ms) => new Promise((r) => setTimeout(r, ms));
-
-    const show = (el) =>
-      requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add("is-visible")));
-
-    const runConvo = async (convo) => {
-      body.innerHTML = "";
-
-      const user = document.createElement("div");
-      user.className = "msg msg-user";
-      body.appendChild(user);
-      show(user);
-
-      if (reducedMotion) {
-        user.textContent = convo.q;
+  document.querySelectorAll("[data-demo-video]").forEach((video) => {
+    new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting && !reducedMotion) {
+        video.play().catch(() => {});
       } else {
-        for (let i = 1; i <= convo.q.length; i++) {
-          user.textContent = convo.q.slice(0, i);
-          await wait(26);
-        }
+        video.pause();
       }
-      await wait(500);
-
-      const typing = document.createElement("div");
-      typing.className = "msg msg-ai msg-typing is-visible";
-      typing.innerHTML = "<i></i><i></i><i></i>";
-      body.appendChild(typing);
-      await wait(reducedMotion ? 200 : 1400);
-      typing.remove();
-
-      const ai = document.createElement("div");
-      ai.className = "msg msg-ai";
-      ai.innerHTML =
-        convo.a +
-        (convo.conf ? `<div class="msg-conf">${convo.conf}</div>` : "");
-      body.appendChild(ai);
-      show(ai);
-
-      await wait(6800);
-    };
-
-    let started = false;
-    const startLoop = async () => {
-      if (started) return;
-      started = true;
-      let i = 0;
-      // eslint-disable-next-line no-constant-condition
-      while (true) {
-        await runConvo(convos[i % convos.length]);
-        i++;
-      }
-    };
-    new IntersectionObserver(
-      ([entry], obs) => {
-        if (entry.isIntersecting) {
-          startLoop();
-          obs.disconnect();
-        }
-      },
-      { threshold: 0.35 }
-    ).observe(chat);
-  }
+    }, { threshold: 0.35 }).observe(video);
+  });
 
   /* ------------------------------------------------------------------
      YouTube click-to-load facades
