@@ -164,12 +164,27 @@
 
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 34px; }
 
+    .cv-toolbar a.back .back-long { display: inline; }
+    .cv-toolbar a.back .back-short { display: none; }
+
     @media (max-width: 720px) {
-      body { padding: 96px 12px 48px; }
-      .sheet { padding: 36px 26px; }
-      .cv-name { font-size: 31px; }
+      body { padding: 88px 12px 48px; }
+      .sheet { padding: 32px 22px; border-radius: 12px; }
+      .cv-name { font-size: 30px; }
+      .cv-headline { font-size: 15px; }
       .two-col { grid-template-columns: 1fr; }
-      .cv-toolbar { padding: 12px 16px; }
+      .cv-toolbar { padding: 10px 14px; gap: 10px; }
+      /* the full domain wrapped to two lines and squeezed the buttons */
+      .cv-toolbar a.back .back-long { display: none; }
+      .cv-toolbar a.back .back-short { display: inline; }
+      .cv-toolbar a.back { font-size: 14px; white-space: nowrap; }
+      .cv-toolbar .actions { gap: 8px; }
+      .cv-btn { font-size: 13px; padding: 9px 15px; white-space: nowrap; }
+      /* long URLs and emails must wrap instead of pushing the sheet wider */
+      .cv-contact { gap: 5px 14px; word-break: break-word; }
+      .entry-head { gap: 2px 14px; }
+      .entry-title { font-size: 15px; }
+      .cv-entry ul { margin-left: 16px; }
     }
 
     @media print {
@@ -205,7 +220,7 @@
 <body>
 
   <div class="cv-toolbar">
-    <a class="back" href="index.html">← rajarshi-ray29.github.io</a>
+    <a class="back" href="index.html">← <span class="back-long">rajarshi-ray29.github.io</span><span class="back-short">Back</span></a>
     <div class="actions">
       <button class="cv-btn ghost" onclick="window.print()">Print</button>
       <a class="cv-btn primary" href="files/resume.pdf" download>Download PDF</a>

@@ -24,10 +24,24 @@
   onScroll();
 
   if (burger && mobileMenu) {
-    burger.addEventListener("click", () => mobileMenu.classList.toggle("is-open"));
+    const setMenu = (open) => {
+      mobileMenu.classList.toggle("is-open", open);
+      burger.setAttribute("aria-expanded", String(open));
+      // stop the page scrolling underneath the drawer on touch devices
+      document.body.style.overflow = open ? "hidden" : "";
+    };
+    burger.setAttribute("aria-expanded", "false");
+    burger.addEventListener("click", () => setMenu(!mobileMenu.classList.contains("is-open")));
     mobileMenu.querySelectorAll("a").forEach((a) =>
-      a.addEventListener("click", () => mobileMenu.classList.remove("is-open"))
+      a.addEventListener("click", () => setMenu(false))
     );
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") setMenu(false);
+    });
+    // rotating to landscape can reveal the desktop nav while the drawer is open
+    window.matchMedia("(min-width: 941px)").addEventListener("change", (e) => {
+      if (e.matches) setMenu(false);
+    });
   }
 
   // highlight nav link of section in view
