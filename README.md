@@ -1,6 +1,6 @@
 # rajarshi-ray29.github.io
 
-Personal site of **Rajarshi Ray** — Founder of [SceneSenseAI](https://rajarshi-ray29.github.io/scenesense.html), AI Engineer at IBM.
+Personal site of **Rajarshi Ray** — part-time entrepreneur behind [SceneSenseAI](https://rajarshi-ray29.github.io/scenesense.html), AI Engineer at IBM.
 
 Hand-built static site (no frameworks, no build step) hosted on GitHub Pages.
 
